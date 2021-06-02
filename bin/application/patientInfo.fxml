@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.profilPatientControl">
+   <children>
+      <VBox layoutX="10.0" layoutY="66.0" spacing="40.0">
+         <children>
+            <Label alignment="BOTTOM_LEFT" contentDisplay="TOP" text="Nom:" />
+            <Label text="Date de Naissance:">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label alignment="BOTTOM_LEFT" text="Debut:" />
+            <Label alignment="BOTTOM_LEFT" text="Numero de Tel :">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label alignment="BOTTOM_LEFT" text="CIN:" />
+         </children>
+      </VBox>
+      <VBox layoutX="114.0" layoutY="61.0" spacing="30.0">
+         <children>
+            <TextField fx:id="nom" style="-fx-border-color: transparent; -fx-background-color: #ededed;" />
+            <DatePicker fx:id="dateN" prefHeight="25.0" prefWidth="133.0" style="-fx-border-color: transparent; -fx-background-color: #ededed;" />
+            <HBox spacing="5.0">
+               <children>
+                  <ComboBox fx:id="hour1" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #ededed;" />
+                  <Label text="h">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="minute1" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #ededed;" />
+                  <Label text="min">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <TextField fx:id="tnum" prefHeight="25.0" prefWidth="149.0" style="-fx-border-color: transparent; -fx-background-color: #ededed;" />
+            <TextField fx:id="tcin" style="-fx-border-color: transparent; -fx-background-color: #ededed;" />
+         </children>
+      </VBox>
+      <Separator layoutX="290.0" layoutY="61.0" orientation="VERTICAL" prefHeight="255.0" prefWidth="11.0" />
+      <VBox layoutX="301.0" layoutY="65.0" spacing="40.0">
+         <children>
+            <Label alignment="BOTTOM_LEFT" text="Prenom:" />
+            <Label alignment="BOTTOM_LEFT" text="Date de rendez-vous:">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label alignment="BOTTOM_LEFT" text="Fin:" />
+            <Label alignment="BOTTOM_LEFT" text="Docteur:" />
+            <Label alignment="BOTTOM_LEFT" text="Adresse e-mail:" />
+         </children>
+      </VBox>
+      <VBox layoutX="424.0" layoutY="61.0" spacing="30.0">
+         <children>
+            <TextField fx:id="prenom" style="-fx-border-color: transparent; -fx-background-color: #ededed;" />
+            <DatePicker fx:id="dateC" prefHeight="25.0" prefWidth="136.0" style="-fx-border-color: transparent; -fx-background-color: #ededed;" />
+            <HBox spacing="5.0">
+               <children>
+                  <ComboBox fx:id="hour" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #ededed;" />
+                  <Label text="h">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="minute" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #ededed;" />
+                  <Label text="min">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <ComboBox fx:id="tdid" prefWidth="150.0" style="-fx-border-color: transparent; -fx-background-color: #ededed;" />
+            <TextField fx:id="temail" style="-fx-border-color: transparent; -fx-background-color: #ededed;" />
+         </children>
+      </VBox>
+      <TextField fx:id="tmal" alignment="TOP_LEFT" layoutX="42.0" layoutY="348.0" prefHeight="192.0" prefWidth="539.0" style="-fx-border-color: transparent; -fx-background-color: #ededed;" />
+      <Label layoutX="46.0" layoutY="323.0" text="Description :" />
+      <Button layoutX="532.0" layoutY="542.0" mnemonicParsing="false" onAction="#ajouterInfo" prefHeight="44.0" prefWidth="44.0" style="-fx-background-radius: 200; -fx-background-color: transparent;">
+         <graphic>
+            <FontAwesomeIcon glyphName="PENCIL" size="2em" />
+         </graphic>
+      </Button>
+      <Button layoutX="36.0" layoutY="542.0" mnemonicParsing="false" onAction="#Print" prefHeight="44.0" prefWidth="44.0" style="-fx-background-radius: 200; -fx-background-color: transparent;">
+         <graphic>
+            <FontAwesomeIcon glyphName="FILE_TEXT" size="2em" />
+         </graphic>
+      </Button>
+      <TextArea fx:id="textA" layoutX="708.0" layoutY="11.0" prefHeight="565.0" prefWidth="549.0" wrapText="true">
+         <font>
+            <Font name="Courier New" size="18.0" />
+         </font>
+      </TextArea>
+   </children>
+</AnchorPane>

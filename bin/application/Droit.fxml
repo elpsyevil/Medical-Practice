@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="200.0" prefWidth="500.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DroitController">
+   <children>
+      <Label layoutX="78.0" layoutY="45.0" text="Vous n'avez pas le droit">
+         <font>
+            <Font name="Century Gothic Bold" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="Close" layoutX="221.0" layoutY="118.0" mnemonicParsing="false" onAction="#Fermer" style="-fx-background-color: transparent;">
+         <graphic>
+            <FontAwesomeIcon glyphName="TIMES_CIRCLE_ALT" size="4em" />
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

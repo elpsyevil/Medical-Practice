@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane fx:id="anchor" prefHeight="720.0" prefWidth="1239.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.employeeContol">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1280.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/appoint.png" />
+         </image>
+         <effect>
+            <BoxBlur height="10.0" width="10.0" />
+         </effect>
+      </ImageView>
+      <TableView fx:id="table" layoutX="1.0" layoutY="27.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#afficherCalendrier" prefHeight="582.0" prefWidth="612.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="111.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="667.0" AnchorPane.topAnchor="27.0">
+        <columns>
+            <TableColumn fx:id="cid" prefWidth="24.0" text="ID" />
+          <TableColumn fx:id="cnom" prefWidth="144.0" text="Nom" />
+          <TableColumn fx:id="cprenom" prefWidth="136.0" text="Prenom" />
+            <TableColumn fx:id="statut" prefWidth="126.0" text="Statut" />
+            <TableColumn fx:id="cnumber" prefWidth="139.0" text="Numero" />
+            <TableColumn fx:id="activ" prefWidth="28.0" />
+        </columns>
+      </TableView>
+      <Pane layoutX="72.0" layoutY="564.0" prefHeight="58.0" prefWidth="1280.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+         <children>
+            <Button fx:id="btnBack" layoutX="2.0" layoutY="1.0" mnemonicParsing="false" onAction="#Back" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <FontAwesomeIcon glyphName="CHEVRON_CIRCLE_LEFT" size="4em" />
+               </graphic>
+            </Button>
+            <TextField fx:id="search" layoutX="764.0" layoutY="11.0" onAction="#recherche" prefHeight="36.0" prefWidth="336.0" style="-fx-background-color: #dcd9d9;" />
+            <Button layoutX="1131.0" layoutY="7.0" mnemonicParsing="false" onAction="#recherche" prefHeight="44.0" prefWidth="44.0" style="-fx-background-radius: 200; -fx-background-color: transparent;">
+               <graphic>
+                  <FontAwesomeIcon glyphName="SEARCH" size="2em" />
+               </graphic>
+            </Button>
+            <Button fx:id="clear" layoutX="1202.0" layoutY="7.0" mnemonicParsing="false" onAction="#Clear" prefHeight="44.0" prefWidth="44.0" style="-fx-background-radius: 200; -fx-background-color: transparent;">
+               <graphic>
+                  <FontAwesomeIcon glyphName="CLOSE" size="2em" />
+               </graphic>
+            </Button>
+            <ComboBox fx:id="type" layoutX="585.0" layoutY="11.0" prefHeight="36.0" prefWidth="150.0" style="-fx-border-color: transparent; -fx-background-color: #ededed;" />
+            <HBox layoutX="175.0" layoutY="7.0" spacing="70.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#afficherInfo" prefHeight="44.0" prefWidth="44.0" style="-fx-background-radius: 200; -fx-background-color: transparent;">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="LIST_ALT" size="2em" />
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#delete" prefHeight="44.0" prefWidth="44.0" style="-fx-background-radius: 200; -fx-background-color: transparent;">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="USER_TIMES" size="2em" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="modifier" mnemonicParsing="false" onAction="#Modify" prefHeight="44.0" prefWidth="44.0" style="-fx-background-radius: 200; -fx-background-color: transparent;">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="PENCIL" size="2em" />
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Pane fx:id="p_info" layoutX="633.0" layoutY="27.0" prefHeight="582.0" prefWidth="646.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+         <children>
+            <TextField fx:id="nom" layoutX="130.0" layoutY="66.0" prefHeight="37.0" prefWidth="177.0" style="-fx-border-color: transparent; -fx-background-color: #ededed;" />
+            <TextField fx:id="prenom" layoutX="130.0" layoutY="175.0" prefHeight="37.0" prefWidth="177.0" style="-fx-border-color: transparent; -fx-background-color: #ededed;" />
+            <Label layoutX="39.0" layoutY="76.0" text="Nom" />
+            <Label layoutX="39.0" layoutY="185.0" text="Prenom" />
+            <Label layoutX="11.0" layoutY="305.0" text="Date de Naissance" />
+            <ComboBox fx:id="st" layoutX="287.0" layoutY="480.0" prefHeight="37.0" prefWidth="177.0" style="-fx-border-color: transparent; -fx-background-color: #ededed;" />
+            <Label layoutX="228.0" layoutY="490.0" text="Status" />
+            <TextField fx:id="email" layoutX="458.0" layoutY="175.0" prefHeight="37.0" prefWidth="177.0" style="-fx-border-color: transparent; -fx-background-color: #ededed;" />
+            <TextField fx:id="cin" layoutX="458.0" layoutY="295.0" prefHeight="37.0" prefWidth="177.0" style="-fx-border-color: transparent; -fx-background-color: #ededed;" />
+            <TextField fx:id="user" layoutX="130.0" layoutY="417.0" prefHeight="37.0" prefWidth="177.0" style="-fx-border-color: transparent; -fx-background-color: #ededed;" />
+            <TextField fx:id="num" layoutX="458.0" layoutY="66.0" prefHeight="37.0" prefWidth="177.0" style="-fx-border-color: transparent; -fx-background-color: #ededed;" />
+            <Label layoutX="374.0" layoutY="76.0" text="Numero" />
+            <Label layoutX="359.0" layoutY="185.0" text="Adresse email" />
+            <DatePicker fx:id="daten" editable="false" layoutX="130.0" layoutY="295.0" prefHeight="37.0" prefWidth="177.0" style="-fx-border-color: transparent; -fx-background-color: #ededed;" />
+            <Label layoutX="386.0" layoutY="305.0" text="CIN" />
+            <Label layoutX="38.0" layoutY="427.0" text="Username" />
+            <Label layoutX="371.0" layoutY="427.0" text="Password" />
+            <PasswordField fx:id="pass" layoutX="458.0" layoutY="417.0" prefHeight="37.0" prefWidth="177.0" style="-fx-border-color: transparent; -fx-background-color: #ededed;" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

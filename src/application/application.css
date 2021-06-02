@@ -1,0 +1,91 @@
+Button {
+	-fx-background-color :  #bdc3c7;
+	-fx-skin: 'application.MyButtonSkin';
+	-fx-cursor: hand;
+
+}
+
+Button:pressed {
+	-fx-background-color :  gray;
+}
+
+MenuBar {
+	-fx-background-color : #7f8c8d;
+}
+
+AnchorPane {
+	-fx-background-color :  #7f8c8d	;
+}
+
+/*JFXButton:hover{
+	-fx-background-color : #81ecec;
+	
+}*/
+
+#btnSpin {
+	-fx-skin: 'application.imgSpinSkin';
+}
+
+#btnPatient{
+	-fx-skin: 'application.myJfxBskin';
+}
+
+#btnOut{
+	-fx-skin: 'application.myJfxBskin';
+}
+
+#btnEmp{
+	-fx-skin: 'application.myJfxBskin';
+}
+
+#btnProfil{
+	-fx-skin: 'application.myJfxBskin';
+}
+
+#test {
+	-fx-skin: 'application.myJfxBskin';
+}
+
+Button:pressed {
+	-fx-scale-x :  0.95;
+	-fx-scale-y : 0.95;
+}
+
+TextField 
+{
+	-fx-font-family: 'Century Gothic', Arial, sans-serif;
+}
+
+PasswordField 
+{
+	-fx-font-family: 'Century Gothic', Arial, sans-serif;
+}
+Button {
+	-fx-font-family: 'Century Gothic', Arial, sans-serif;
+}
+
+Label {
+	-fx-font-family: 'Century Gothic', Arial, sans-serif;
+}
+
+TableView {
+		-fx-font-family: 'Century Gothic', Arial, sans-serif;
+	
+}
+
+DatePicker{
+		-fx-font-family: 'Century Gothic', Arial, sans-serif;
+	
+}
+
+
+
+Agenda {
+		-fx-font-family: 'Century Gothic', Arial, sans-serif;
+	
+}
+
+ComboBox{
+		-fx-font-family: 'Century Gothic', Arial, sans-serif;
+	
+}

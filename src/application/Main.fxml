@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SecondController">
+   <children>
+      <ImageView fx:id="img3" fitHeight="720.0" fitWidth="1280.0" layoutX="10.0" layoutY="10.0" opacity="0.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@img/menu3.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img2" fitHeight="720.0" fitWidth="1280.0" layoutX="10.0" layoutY="10.0" opacity="0.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@img/img3.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img1" fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@img/img2menu.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="61.0" layoutY="308.0" prefHeight="392.0" prefWidth="1280.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <HBox layoutX="340.0" layoutY="251.0">
+         <children>
+            <VBox>
+               <children>
+                  <JFXButton fx:id="btnPatient" alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#openPatient" prefHeight="193.0" prefWidth="300.0" style="-fx-background-color: #00b894;" text="Patients" textFill="WHITE">
+                  	<graphic>
+                  		<ImageView fitHeight="100.0" fitWidth="100.0" onDragDetected="#openPatient">
+                  			<image>
+                  				<Image url="@img/patient.png" />
+                  			</image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                  		</ImageView>	
+                  	 </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Century Gothic Bold" size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnOut" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#Logout" prefHeight="193.0" prefWidth="300.0" style="-fx-background-color: #55efc4;" text="Logout" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Century Gothic Bold" size="20.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <JFXButton fx:id="btnEmp" alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#openEmployee" prefHeight="193.0" prefWidth="300.0" style="-fx-background-color: #00cec9;" text="Employee" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/doctor2.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Century Gothic Bold" size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnProfil" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#openProfil" prefHeight="193.0" prefWidth="300.0" style="-fx-background-color: #81ecec;" text="Profil" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/unnamed.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Century Gothic Bold" size="20.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
