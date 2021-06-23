@@ -8,7 +8,7 @@
 
 ## Login and profile
 <p align="center">
-  <img  src="login.gif" style="width:150%;height=150%;">
+  <img  src="login.gif">
 </p>
 
 ## Employees
