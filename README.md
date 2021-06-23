@@ -6,7 +6,7 @@
   <img  src="register.gif">
 </p>
 
-## Login and profilw
+## Login and profile
 <p align="center">
   <img  src="login.gif">
 </p>
